@@ -16,6 +16,12 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 class FullscreenActivity : AppCompatActivity() {
 
 
+    override fun onResume() {
+        super.onResume()
+        val webView = findViewById<WebView>(R.id.webview)
+        webView.reload()
+    }
+
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
